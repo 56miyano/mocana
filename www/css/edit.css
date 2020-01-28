@@ -1,0 +1,17 @@
+/* This is a CSS file */
+#edit {
+  position: absolute;
+  top: 70px;
+  width: 90vw;
+}
+
+#take {
+  width: 70vw;
+  height: 70vw;
+  object-fit: cover;
+  margin: 0 10vw;
+}
+
+#information {
+  margin-left: 20vw;
+}

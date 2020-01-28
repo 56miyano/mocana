@@ -1,0 +1,51 @@
+/* This is a CSS file */
+* {
+  background-color: #fff3b8;
+  /*ulの点を消す*/
+  list-style: none; 
+  padding: 0;
+}
+
+#header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  height: 64px;
+  background-color: #ffffff;
+}
+
+#nav_coord_list {
+  display: flex;
+  position: fixed;
+  top: 64px;
+  bottom: 64px;
+  left: 0%;
+  width: 100vw;
+  height: 64px;
+}
+
+#nav_coord {
+  position: fixed;
+  left: 0;
+  width: 50vw;
+  height: 64px;
+  background-color: #ddffdd;
+  text-align: center;
+}
+
+#nav_list {
+  position: fixed;
+  left: 50%;
+  width: 50vw;
+  height: 64px;
+  background-color: #ddffdd;
+  text-align: center;
+}
+
+.nav_icon {
+  position: relative;
+  /*ボタンとテキストの位置を近づける*/
+  top: 1vw;
+  width: 32px;
+}

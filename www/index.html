@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/coord.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/edit.css">
+    <script>
+    </script>
+</head>
+<body>
+  <section id="coord">
+    <ul>
+      <li class="coord_added">
+        <img src="img/cloth/JP-845_093.jpg" class="coord_added_img">
+        <div class="coord_added_button_text">
+          <button class="coord_added_button_put">場所</button>
+          <button class="coord_added_button_wash">洗濯</button>
+          <button class="coord_added_button_adv">注意</button>
+          <button class="coord_added_button_del">削除</button>
+          <p class="coord_added_text">ズボン</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section id="list" style="display:none;">
+    <ul id="list_cloth">
+      <li>
+        <img src="img/cloth/JP-845_093.jpg" class="list_img">
+      </li>
+    </ul>
+      <nav id="nav_details_add">
+        <div id="nav_details" class="nav_details_add" onclick="transition(2);">
+          <img src="img/icon/details.png" class="nav_icon" style="background-color: #ddddff;">
+          <br>
+          服の詳細
+        </div>
+
+        <div id="nav_add" class="nav_details_add"  onclick="transition(3);">
+          <img src="img/icon/plus.png" class="nav_icon" style="background-color: #ddddff;">
+          <br>
+          服を追加
+        </div>
+      </nav>
+  </section>
+
+  <section id="details" style="display:none;">
+    <div style="margin: 0 auto;">
+      服の名前
+    </div>
+
+    <br>
+
+    <img src="img/fuku.jpg" id="take">
+
+    <div id="information">
+
+      <div>
+        <p>シャツ</p>
+      </div>
+
+      <div>
+        <p>夏</p>
+      </div>
+
+      <div>
+        <p>おいてある場所</p>
+        <p>リビング</p>
+      </div>
+
+      <div>
+        <p>洗濯情報</p>
+        <p>手洗い不可</p>
+      </div>
+
+      <div>
+        <p>着るときの注意</p>
+        
+      </div>
+
+      <br>
+
+      <input type="button" value="削除する">
+
+      </div>
+  </section>
+
+  <section id="edit" style="display:none;">
+    <div>
+      服の名前：
+      <input type="text" name="name" size="30" maxlength="20">
+    </div>
+
+    <br>
+
+    <img src="img/fuku.jpg" id="take">
+
+    <div id="information">
+
+      <div>
+        <p>ジャンル</p>
+        <input type="checkbox" value="0">帽子<br>
+        <input type="checkbox" value="1">首<br>
+        <input type="checkbox" value="2">シャツ（半袖）<br>
+        <input type="checkbox" value="3">シャツ（長袖）<br>
+        <input type="checkbox" value="4">ズボン<br>
+        <input type="checkbox" value="5">靴下<br>
+        <input type="checkbox" value="6">靴
+      </div>
+
+      <div>
+        <p>季節</p>
+        <input type="checkbox" value="0">春<br>
+        <input type="checkbox" value="1">夏<br>
+        <input type="checkbox" value="2">秋<br>
+        <input type="checkbox" value="3">冬
+      </div>
+
+      <div>
+        <p>おいてある場所</p>
+      <textarea></textarea>
+      </div>
+
+      <div>
+        <p>洗濯情報</p>
+      <textarea></textarea>
+      </div>
+
+      <div>
+        <p>着るときの注意</p>
+      <textarea></textarea>
+      </div>
+
+      <br>
+
+      <input type="button" value="登録or編集する">
+
+    </div>
+  </section>
+
+  <header id="header">
+    <img src="img/appname.png" height="64px">
+  </header>
+  <nav id="nav_coord_list">
+    <div id="nav_coord" class="nav_coord_add" onclick="transition(0);">
+      <img src="img/icon/cloth.png" class="nav_icon" style="background-color: #ddffdd;">
+      <br> 
+      コーデ 
+      </div>
+    <div id="nav_list" class="nav_list_add" onclick="transition(1);">
+      <img src="img/icon/list.png" class="nav_icon" style="background-color: #ddffdd;" >
+      <br>
+      服一覧
+    </div>
+  </nav>
+  <script src="js/main.js"></script>
+  <script src="js/shoot.js"></script>
+  <script src="js/list.js"></script>
+</body>
+</html>

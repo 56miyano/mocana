@@ -1,0 +1,46 @@
+/* This is a CSS file */
+#coord {
+  position: absolute;
+  top: 128px;
+}
+
+.coord_added {
+  display: flex;
+  position: absolute;
+  left: 0vw;
+  width: 90vw;
+  text-align: left;
+}
+
+.coord_added_img {
+  width: 30vw;
+  height: 30vw;
+}
+
+.coord_added_button_text {
+  margin: 0 2vw;
+}
+
+.coord_added_button_put {
+  background-color: #00ff00;
+}
+
+.coord_added_button_wash {
+  background-color: #00bfff;
+}
+
+.coord_added_button_adv {
+  background-color: #ffff00;
+}
+
+.coord_added_button_del {
+  background-color: red;
+  color: #ffffff;
+}
+
+.coord_added_text {
+  position: relative;
+  /*ボタンとテキストの位置を近づける*/
+  top:-3vw;
+  background-color: #ffffff;
+}
