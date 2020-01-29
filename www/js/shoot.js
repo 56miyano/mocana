@@ -12,6 +12,7 @@ const shoot = () => {
     function onSuccess(imageURI){
         document.querySelector("#take").src = imageURI;
         photolist.push(imageURI);
+        addphoto(imageURI);
     }
         
     //失敗時に呼び出されるコールバック関数

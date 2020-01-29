@@ -5,13 +5,9 @@
   width: 90vw;
 }
 
-#take {
+#addtake {
   width: 70vw;
   height: 70vw;
   object-fit: cover;
   margin: 0 10vw;
-}
-
-#information {
-  margin-left: 20vw;
 }

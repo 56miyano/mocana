@@ -15,6 +15,7 @@
 .coord_added_img {
   width: 30vw;
   height: 30vw;
+  object-fit: cover;
 }
 
 .coord_added_button_text {
