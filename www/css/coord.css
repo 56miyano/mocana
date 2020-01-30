@@ -6,20 +6,17 @@
 
 .coord_added {
   display: flex;
-  position: absolute;
-  left: 0vw;
-  width: 90vw;
-  text-align: left;
+  width: 100vw;
 }
 
 .coord_added_img {
-  width: 30vw;
-  height: 30vw;
+  width: 45vw;
+  height: 45vw;
   object-fit: cover;
 }
 
 .coord_added_button_text {
-  margin: 0 2vw;
+  margin: 0 3vw;
 }
 
 .coord_added_button_put {
@@ -41,7 +38,6 @@
 
 .coord_added_text {
   position: relative;
-  /*ボタンとテキストの位置を近づける*/
-  top:-3vw;
+  top:-3vw; /*ボタンとテキストの位置を近づける*/
   background-color: #ffffff;
 }
