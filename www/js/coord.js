@@ -19,19 +19,18 @@ const coordArrange = () => {
     document.getElementById(i).appendChild(coord_added_button_text); 
     //四つのボタンの処理
     const place = document.createElement("button");
+    place.id = "coord_added_button_put"+i;
     place.className = "coord_added_button_put";
     place.innerHTML = "場所";
-    place.addEventListener("touchend",change_place_text(i),false);
     const adv = document.createElement("button");
+    adv.id = "coord_added_button_adv"+i;
     adv.className = "coord_added_button_adv";
     adv.innerHTML = "注意";
-    adv.addEventListener("touchend",change_adv_text(i),false);
     const del = document.createElement("button");
     del.className = "coord_added_button_del";
     del.innerHTML = "削除";
-    //テキスト
     const p = document.createElement("p");
-    p.id = "coord_add_text"+i; 
+    p.id = "coord_add_text"+i;
     p.className ="coord_added_text";
     p.innerHTML= placelist[registered_clothes[i]];
     //ボタンとテキストのappendchild
@@ -39,14 +38,27 @@ const coordArrange = () => {
     document.getElementById("j"+i).appendChild(adv);
     document.getElementById("j"+i).appendChild(del);
     document.getElementById("j"+i).appendChild(p);
+    //addEventListerはappendChild(p)より後に作る関数で作らないとiが常に最大値になる
+    create_coord_button(i);
   }  
 }
+
+//コードページのボタンを作る
+const create_coord_button = (i) => {
+  document.getElementById("coord_added_button_put"+i).addEventListener('touchend',function(p){
+      document.getElementById("coord_add_text"+i).innerHTML = placelist[registered_clothes[i]];
+    },false);
+  document.getElementById("coord_added_button_adv"+i).addEventListener('touchend',function(p){
+      document.getElementById("coord_add_text"+i).innerHTML = attentionlist[registered_clothes[i]];
+    },false);
+}
+
 //コードページのボタン処理
 const change_place_text = (i) => {
-  console.log("coord.add_text"+i);
-  document.getElementById("coord.add_text"+i).innerHTML = placelist[registered_clothes[i]];
+  console.log("coord_add_text"+i);
+  document.getElementById("coord_add_text"+i).innerHTML = placelist[registered_clothes[i]];
 }
 
 const change_adv_text = (i) => {
-  document.getElementById("coord.add_text"+i).innerHTML = attentionlistlist[registered_clothes[i]];
+  document.getElementById("coord_add_text"+i).innerHTML = attentionlist[registered_clothes[i]];
 }
