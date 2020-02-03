@@ -1,12 +1,4 @@
 /* This is a CSS file */
-.list_img {
-  width: 45vw;
-  height: 45vw;
-  object-fit: cover;
-  border: 2px;
-  border-color: red;
-}
-
 #list_cloth {
   display: flex;
   position: absolute;
@@ -14,25 +6,19 @@
   left: 3vw;
   flex-wrap: wrap;
   padding: 0;
-  padding-bottom: 64px;
 }
 
-#nav_details_add {
-  display: flex;
-  position: fixed;
-  bottom: 0px;
-  width: 100vw;
-  height: 64px;
-  background-color: #ffffff;
+.list_img {
+  width: 45vw;
+  height: 45vw;
+  object-fit: cover;
 }
 
-#nav_details {
-  position: fixed;
-  bottom: 0px;
-  left: 0;
-  width: 50vw;
-  height: 64px;
+#addButton {
+  width: 45vw;
+  height: 45vw;
   background-color: #ddddff;
+  font-size: 9vw;
   text-align: center;
 }
 
