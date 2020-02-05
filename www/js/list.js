@@ -13,6 +13,8 @@ const listArrange = () => {
   addButton.innerHTML = 
   '<img src="' + '../img/icon/plus.png"'+ 'width="100vw"' +'style="' + 'background-color: #ddddff"' + "; >"
   +  "<br>服を追加";
+  //functionで囲まないと動かない
+  addButton.addEventListener('touchend',function() {transition(3)},'false');
   list_cloth.appendChild(addButton);
 }
 
