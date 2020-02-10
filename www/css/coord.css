@@ -23,12 +23,13 @@
   background-color: #00ff00;
 }
 
-.coord_added_button_wash {
-  background-color: #00bfff;
-}
-
 .coord_added_button_adv {
   background-color: #ffff00;
+}
+
+.coord_added_button_edi {
+  background-color: #0000ff;
+  color: #ffffff;
 }
 
 .coord_added_button_del {

@@ -26,6 +26,9 @@ const coordArrange = () => {
     adv.id = "coord_added_button_adv"+i;
     adv.className = "coord_added_button_adv";
     adv.innerHTML = "注意";
+    const edi = document.createElement("button");
+    edi.className = "coord_added_button_edi";
+    edi.innerHTML = "編集";
     const del = document.createElement("button");
     del.className = "coord_added_button_del";
     del.innerHTML = "削除";
@@ -36,6 +39,7 @@ const coordArrange = () => {
     //ボタンとテキストのappendchild
     document.getElementById("j"+i).appendChild(place);
     document.getElementById("j"+i).appendChild(adv);
+    document.getElementById("j"+i).appendChild(edi);
     document.getElementById("j"+i).appendChild(del);
     document.getElementById("j"+i).appendChild(p);
     //addEventListerはappendChild(p)より後に作る関数で作らないとiが常に最大値になる
