@@ -42,3 +42,9 @@
   top:-3vw; /*ボタンとテキストの位置を近づける*/
   background-color: #ffffff;
 }
+
+#coord_modal_img {
+  width: 80vw;
+  height: 80vw;
+  object-fit: cover;
+}

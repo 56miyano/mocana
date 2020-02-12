@@ -7,10 +7,12 @@ const coordArrange = () => {
     coord_li.id = i;
     coord_li.className = "coord_added";
     document.getElementById("coordArrange").appendChild(coord_li);
-    //画像
-    const img = document.createElement("img");
-    img.src = photolist[registered_clothes[i]];
-    img.className = "coord_added_img";
+    //画像、aタグを使う
+    const img = document.createElement("a");
+    img.innerHTML='<img src="' + photolist[registered_clothes[i]] + '"class="coord_added_img">';
+    img.className = "coord_a"
+    img.href = "#coord_modal";
+    img.name = photolist[registered_clothes[i]];
     document.getElementById(i).appendChild(img);
     //ボタンとテキスト
     let coord_added_button_text = document.createElement("div");
@@ -66,3 +68,27 @@ const change_place_text = (i) => {
 const change_adv_text = (i) => {
   document.getElementById("coord_add_text"+i).innerHTML = attentionlist[registered_clothes[i]];
 }
+
+$(function(){
+ //$(document).on("click", ".add-btn", function () {
+// モーダルウィンドウが開くときの処理    
+$(document).on("click",".coord_a",function(){
+      console.log(this.href);
+    var navClass = $(this).attr("class"),
+        href = $(this).attr("href");
+        document.getElementById("coord_modal_img").src = $(this).attr("name");
+        console.log(document.getElementById("coord_modal_img").src);
+            
+        $(href).fadeIn();
+    $(this).addClass("open");
+    return false;
+});
+ 
+// モーダルウィンドウが閉じるときの処理    
+$(".modalClose").click(function(){
+    $(this).parents(".modal").fadeOut();
+    $(".modalOpen").removeClass("open");
+    return false;
+});  
+    
+});
